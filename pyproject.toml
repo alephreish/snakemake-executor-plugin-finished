@@ -2,6 +2,7 @@
 name = "snakemake-executor-plugin-finished"
 version = "0.1.0"
 description = "Snakemake executor plugin that marks targets as finished"
+readme = { file = "README.md", content-type = "text/markdown" }
 authors = [{ name = "Andrey Rozenberg", email = "alephreish@gmail.com" }]
 requires-python = ">=3.11,<4.0"
 dependencies = [
