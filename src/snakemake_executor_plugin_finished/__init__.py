@@ -1,6 +1,25 @@
-from snakemake_interface_executor_plugins.settings import CommonSettings
+from dataclasses import dataclass, field
+
+from snakemake_interface_executor_plugins.settings import (
+    CommonSettings,
+    ExecutorSettingsBase,
+)
 
 from .executor import Executor
+
+
+@dataclass
+class ExecutorSettings(ExecutorSettingsBase):
+    no_touch: bool = field(
+        default=False,
+        metadata={
+            "help": (
+                "Do not touch output timestamps after marking jobs as finished. "
+                "By default, outputs are touched."
+            )
+        },
+    )
+
 
 common_settings = CommonSettings(
     non_local_exec=False,
@@ -12,4 +31,4 @@ common_settings = CommonSettings(
     auto_deploy_default_storage_provider=False,
 )
 
-__all__ = ["Executor", "common_settings"]
+__all__ = ["Executor", "ExecutorSettings", "common_settings"]

@@ -20,4 +20,6 @@ pip install git+https://github.com/alephreish/snakemake-executor-plugin-finished
 snakemake --executor finished <target1> <target2>
 ```
 
-The executor will mark the matching jobs as finished, touch the outputs, and fail if any requested target files do not exist. If nothing triggers a re-run, no modifications are made to the metadata or timestamps of the correspondign outputs.
+The executor marks matching jobs as finished and fails if any requested target files or their transitive dependency outputs do not exist.
+By default, it touches matching outputs (including `.snakemake_timestamp` for directory targets).
+Use `--finished-no-touch` to preserve existing output timestamps.
