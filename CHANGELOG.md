@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/alephreish/snakemake-executor-plugin-finished/compare/v0.1.1...v0.1.2) (2026-06-09)
+
+
+### Bug Fixes
+
+* **executor:** fail early when dependency outputs are missing, implement --finished-no-touch ([2adaf71](https://github.com/alephreish/snakemake-executor-plugin-finished/commit/2adaf7184ca1e1315ca2448d939ca97d80dac362))
+
 ## [0.1.1](https://github.com/alephreish/snakemake-executor-plugin-finished/compare/v0.1.0...v0.1.1) (2026-06-05)
 
 
